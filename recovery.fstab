@@ -1,0 +1,23 @@
+# Modified partition layout, apply patch before using this table.
+
+# mount point	fstype		device					[device2]			[length=]
+
+/sys_boot		vfat		/dev/block/mmcblk0p1
+/sbl1			emmc		/dev/block/mmcblk0p2
+/tz				emmc		/dev/block/mmcblk0p3
+/ext			emmc		/dev/block/mmcblk0p4
+/splash			emmc		/dev/block/mmcblk0p5
+/boot			emmc		/dev/block/mmcblk0p6
+/recovery		emmc		/dev/block/mmcblk0p7
+/fsg			emmc		/dev/block/mmcblk0p8
+/adsp			emmc		/dev/block/mmcblk0p9
+/modem_st1		vfat		/dev/block/mmcblk0p10
+/modem_st2		vfat		/dev/block/mmcblk0p11
+/misc			emmc		/dev/block/mmcblk0p12
+/system			ext4		/dev/block/mmcblk0p13
+/data			ext4		/dev/block/mmcblk0p14						length=-16384
+/cache			ext4		/dev/block/mmcblk0p15
+/emmc			vfat		/dev/block/mmcblk0p16
+
+/sdcard			vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1
+/sd-ext			ext4		/dev/block/mmcblk1p2
