@@ -67,6 +67,7 @@ BOARD_EGL_CFG := device/huawei/u8800/egl.cfg
 
 # Kernel
 TARGET_KERNEL_CONFIG := u8800-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/u8800
 KERNEL_EXTERNAL_MODULES:
 	cp device/huawei/u8800/prebuilt/wlan.ko $(KERNEL_MODULES_OUT)
 TARGET_KERNEL_MODULES := KERNEL_EXTERNAL_MODULES
