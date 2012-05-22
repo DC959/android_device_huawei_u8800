@@ -17,7 +17,7 @@ $(call inherit-product, device/huawei/u8800/full_u8800.mk)
 PRODUCT_DEVICE := u8800
 PRODUCT_NAME := cm_u8800
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := Huawei U8800
+PRODUCT_MODEL := U8800
 PRODUCT_MANUFACTURER := Huawei
 
 #Set build fingerprint / ID / Product Name ect.
