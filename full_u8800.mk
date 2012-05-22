@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
 PRODUCT_LOCALES += hdpi
 
 # Camera
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	Camera
 
 # Audio
