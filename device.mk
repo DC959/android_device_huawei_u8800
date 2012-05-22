@@ -12,10 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PACKAGE_OVERLAYS := device/huawei/u8800/overlay
+# Include proprietary stuff
+$(call inherit-product-if-exists, vendor/huawei/u8800/u8800-vendor.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800/overlay
 
 # These are the hardware-specific features
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
@@ -42,9 +45,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
-
-# Include proprietary stuff
-$(call inherit-product-if-exists, vendor/huawei/u8800/u8800-vendor.mk)
 
 # Include initscripts
 $(call inherit-product-if-exists, device/huawei/u8800/initscripts/initscripts.mk)

@@ -16,7 +16,7 @@
 
 include $(LOCAL_PATH)/common.mk
 
-PRODUCT_COPY_FILES := $(foreach file,$(keylayouts),\
+PRODUCT_COPY_FILES += $(foreach file,$(keylayouts),\
 	$(LOCAL_PATH)/$(file):system/usr/keylayout/$(file))
 
 PRODUCT_COPY_FILES += $(foreach file,$(keycharmaps),\

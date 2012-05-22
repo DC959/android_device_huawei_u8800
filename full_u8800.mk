@@ -12,26 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for maguro hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and maguro, hence its name.
-#
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+# Inherit from u8800 device
+$(call inherit-product, device/huawei/u8800/device.mk)
 
-# Include all locales
-$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
+# Include all languages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# This is where we'd set a backup provider if we had one
+#$(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # U8800 uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Camera
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	Camera
 
 # Audio
@@ -65,15 +63,11 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-	lights.msm7x30 \
-	sensors.msm7x30
+	lights.msm7x30
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
-# Inherit from u8800 device
-$(call inherit-product, device/huawei/u8800/device.mk)
+# Sensors
+PRODUCT_PACKAGES += \
+	sensors.msm7x30
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_u8800

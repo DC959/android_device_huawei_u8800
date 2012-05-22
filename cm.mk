@@ -7,11 +7,11 @@ PRODUCT_RELEASE_NAME := U8800
 # Boot animation
 TARGET_BOOTANIMATION_NAME := vertical-480x800
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/huawei/u8800/full_u8800.mk)
+
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := u8800

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Warning: this is actually a product definition, to be inherited from
+# Warning: this is actually a product definition, to be inherited from.
 
 rootscripts := \
 	init.qcom.sh
@@ -26,7 +26,7 @@ etcscripts := \
 	init.qcom.usb.sh \
 	init.qcom.wifi.sh
 
-PRODUCT_COPY_FILES := $(foreach file,$(rootscripts),\
+PRODUCT_COPY_FILES += $(foreach file,$(rootscripts),\
 	$(LOCAL_PATH)/$(file):root/$(file))
 
 PRODUCT_COPY_FILES += $(foreach file,$(etcscripts),\
