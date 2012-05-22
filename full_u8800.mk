@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 	audio.primary.msm7x30 \
 	libaudioutils
 
+# Camera
+PRODUCT_PACKAGES += \
+	camera.msm7x30
+
 # Video
 PRODUCT_PACKAGES += \
 	copybit.msm7x30 \
@@ -61,7 +65,8 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-	lights.msm7x30
+	lights.msm7x30 \
+	sensors.msm7x30
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
