@@ -17,7 +17,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_DEVICE := u8800
 PRODUCT_NAME := cm_u8800
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := Huawei U8800
+PRODUCT_MODEL := U8800
 PRODUCT_MANUFACTURER := Huawei
 
 #Set build fingerprint / ID / Product Name ect.
