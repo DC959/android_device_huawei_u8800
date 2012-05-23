@@ -25,8 +25,7 @@ ro.ril.shutdown=true
 ro.opengles.version=131072
 
 debug.sf.hw=1
-debug.composition.type=gpu
-dalvik.vm.heapsize=24m
+debug.composition.type=dyn
 dev.pm.dyn_samplingrate=1
 ro.sf.lcd_density=240
 ro.hdmi.enable=false
