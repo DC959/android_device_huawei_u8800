@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_eu_supl.mk)
+
 # Include proprietary stuff
 $(call inherit-product-if-exists, vendor/huawei/u8800/u8800-vendor.mk)
 
