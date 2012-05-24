@@ -64,8 +64,8 @@ PRODUCT_PACKAGES += \
 	libstagefrighthw
 
 # GPS
-#PRODUCT_PACKAGES += \
-#	gps.u8800
+PRODUCT_PACKAGES += \
+	gps.u8800
 
 # Lights
 PRODUCT_PACKAGES += \
