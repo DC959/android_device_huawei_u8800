@@ -39,10 +39,6 @@ PRODUCT_PACKAGES += \
 	audio.primary.msm7x30 \
 	libaudioutils
 
-# Camera
-PRODUCT_PACKAGES += \
-	camera.msm7x30
-
 # Video
 PRODUCT_PACKAGES += \
 	copybit.msm7x30 \
@@ -59,15 +55,25 @@ PRODUCT_PACKAGES += \
 	libOmxCore \
 	libOmxVenc \
 	libOmxVdec \
+	libmm-omxcore \
+	libdivxdrmdecrypt \
 	libstagefrighthw
 
 # Lights
 PRODUCT_PACKAGES += \
 	lights.msm7x30
 
-# Sensors
+# Live Wallpapers
 PRODUCT_PACKAGES += \
-	sensors.msm7x30
+   	LiveWallpapers \
+    	LiveWallpapersPicker \
+    	VisualizationWallpapers \
+    	librs_jni
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+   	make_ext4fs \
+    	setup_fs
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_u8800
