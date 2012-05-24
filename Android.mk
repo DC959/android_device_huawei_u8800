@@ -14,6 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-device-makefiles := keyboards wpa_supplicant_8_lib setmac
+device-makefiles := keyboards wpa_supplicant_8_lib setmac libcamera
 
 include $(call all-named-subdir-makefiles,$(device-makefiles))
