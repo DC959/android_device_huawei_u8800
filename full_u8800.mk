@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
 	audio.primary.msm7x30 \
 	libaudioutils
 
+# Camera
+PRODUCT_PACKAGES += \
+	camera.msm7x30
+
 # Video
 PRODUCT_PACKAGES += \
 	copybit.msm7x30 \
@@ -59,9 +63,15 @@ PRODUCT_PACKAGES += \
 	libdivxdrmdecrypt \
 	libstagefrighthw
 
+# GPS
+#PRODUCT_PACKAGES += \
+#	gps.u8800
+
 # Lights
 PRODUCT_PACKAGES += \
 	lights.msm7x30
+
+# Sensors (Prebuilt)
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
