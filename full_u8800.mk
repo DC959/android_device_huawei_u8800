@@ -28,6 +28,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+PRODUCT_PROPERTY_OVERRIDES += \
+        dalvik.vm.heapstartsize=5m \
+        dalvik.vm.heapgrowthlimit=48m \
+        dalvik.vm.heapsize=128m
+
+# USB mass storage
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.sys.usb.config=mass_storage
+
+# ADB access
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.service.adb.enable=1
+
 # Camera
 PRODUCT_PACKAGES += \
 	Camera
