@@ -71,6 +71,7 @@ TARGET_HAVE_TSLIB := true
 BOARD_EGL_CFG := device/huawei/u8800/egl.cfg
 
 # Kernel
+BUILD_KERNEL := true
 TARGET_KERNEL_CONFIG := u8800-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/u8800
 KERNEL_EXTERNAL_MODULES:
