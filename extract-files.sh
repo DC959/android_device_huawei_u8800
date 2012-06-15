@@ -35,6 +35,7 @@ do
 	adb pull /system/$FILE $BASE/$FILE
 done < proprietary-files.txt
 
+# Give correct permissions and folders also need execute permission.
 chmod 775 $BASE/bin/*
 chmod 644 $BASE/lib/*
 chmod 777 $BASE/lib/egl
