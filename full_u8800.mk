@@ -89,15 +89,15 @@ PRODUCT_PACKAGES += \
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
-   	LiveWallpapers \
-    	LiveWallpapersPicker \
-    	VisualizationWallpapers \
-    	librs_jni
+	LiveWallpapers \
+	LiveWallpapersPicker \
+	VisualizationWallpapers \
+	librs_jni
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-   	make_ext4fs \
-    	setup_fs
+	make_ext4fs \
+	setup_fs
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_u8800
