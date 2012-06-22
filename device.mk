@@ -44,7 +44,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-	$(LOCAL_PATH)/hostapd_default.conf:system/etc/hostapd_default.conf
+	$(LOCAL_PATH)/hostapd_default.conf:system/etc/hostapd_default.conf \
+	$(LOCAL_PATH)/media_profiles.xml:/system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
