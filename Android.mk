@@ -14,6 +14,4 @@
 
 LOCAL_PATH := $(call my-dir)
 
-device-makefiles := keyboards setmac libcamera
-
-include $(call all-named-subdir-makefiles,$(device-makefiles))
+include $(call all-makefiles-under,$(LOCAL_PATH))
